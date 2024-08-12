@@ -10,6 +10,9 @@ import java.util.ArrayList;
 public class Program {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        List<Book> book = new ArrayList<>();
         
     }
 
