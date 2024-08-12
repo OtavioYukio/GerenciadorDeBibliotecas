@@ -2,18 +2,24 @@ package func;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import func.Biblioteca;
 import entities.Book;
 import java.util.Scanner;
 
 public class Search {
+
     public static List<Book> buscarPorTitulo(String titulo, List<Book> list) {
+        Scanner sc = new Scanner(System.in);
         List<Book> encontrados = new ArrayList<>();
         for (Book book : list) {
             if (book.getTitle().equalsIgnoreCase(titulo)) {
                 encontrados.add(book);
             }
         }
+        for (Book b : encontrados) {
+            System.out.println(b);
+        }
+
         return encontrados;
     }
 
@@ -24,6 +30,10 @@ public class Search {
                 encontrados.add(book);
             }
         }
+        for (Book b : encontrados) {
+            System.out.println(b);
+        }
+        
         return encontrados;
     }
 }

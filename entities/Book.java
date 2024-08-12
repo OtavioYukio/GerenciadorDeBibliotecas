@@ -5,7 +5,7 @@ public class Book {
     private String author;
     private String genre;
 
-    Book(String title, String author, String genre) {
+    public Book(String title, String author, String genre) {
         this.title = title;
         this.author = author;
         this.genre = genre;
@@ -30,6 +30,12 @@ public class Book {
     }
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    public String toString() {
+        return "Titulo: " + title + "\n" +
+        "Autor: " + author + "\n" +
+        "Genero: " + genre + "\n" + "-------------------";
     }
 
 }

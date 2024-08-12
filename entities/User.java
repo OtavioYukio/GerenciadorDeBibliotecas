@@ -7,7 +7,7 @@ public class User {
     private Integer id;
     private List emprestimos;
 
-    User(String name, Integer id, List emprestimos) {
+    public User(String name, Integer id, List emprestimos) {
         this.name = name;
         this.id = id;
         this.emprestimos = emprestimos;

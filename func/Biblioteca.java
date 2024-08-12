@@ -8,15 +8,17 @@ import java.util.Scanner;
 
 public class Biblioteca {
 
-    public static void cadastrarLivro(Book newBook) {
+    public static Book cadastrarLivro() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o titulo: ");
-        newBook.setTitle(sc.nextLine());
+        String title = sc.nextLine();
         System.out.print("Digite o nome do autor: ");
-        newBook.setAuthor(sc.nextLine());
+        String author = sc.nextLine();
         System.out.print("Digite o genero: ");
-        newBook.setGenre(sc.nextLine());
+        String genre = sc.nextLine();
+
+        return new Book(title, author, genre);
     }
 
     public static void editarLivro(Book editBook) {
@@ -40,5 +42,5 @@ public class Biblioteca {
             editarLivro(editBook);
         }
     }
-    
+
 }
