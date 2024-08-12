@@ -44,7 +44,14 @@ public class Program {
                                     Biblioteca.editarLivro(b);
                                 }
                             }
-                        break;
+                            break;
+                        
+                        case 2:
+                            for (Book b : bookList) {
+                                if (b.getTitle() == title) {
+                                    bookList.remove(b);
+                                }
+                            }
                     }
                     break;
 

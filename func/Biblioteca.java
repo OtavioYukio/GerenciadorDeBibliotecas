@@ -32,7 +32,7 @@ public class Biblioteca {
             editBook.setTitle(sc.nextLine());
         }
         else if (option == 2) {
-            editBook.setTitle(sc.nextLine());
+            editBook.setAuthor(sc.nextLine());
         }
         else if (option == 3) {
             editBook.setGenre(sc.nextLine());
@@ -40,6 +40,7 @@ public class Biblioteca {
         else {
             System.out.println("Opção invalida, tente novamente");
             editarLivro(editBook);
+        
         }
     }
 
