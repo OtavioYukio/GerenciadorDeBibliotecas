@@ -17,14 +17,16 @@ public class Biblioteca {
         String author = sc.nextLine();
         System.out.print("Digite o genero: ");
         String genre = sc.nextLine();
+        System.out.print("Digite o preço: ");
+        Double price = sc.nextDouble();
 
-        return new Book(title, author, genre);
+        return new Book(title, author, genre, price);
     }
 
     public static void editarLivro(Book editBook) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("O que deseja alterar?\n1 - Titulo\n2 - Autor\n3 - Genero");
+        System.out.println("O que deseja alterar?\n1 - Titulo\n2 - Autor\n3 - Genero\n4 - Preço");
         int option = sc.nextInt();
         sc.nextLine();
 
@@ -36,6 +38,9 @@ public class Biblioteca {
         }
         else if (option == 3) {
             editBook.setGenre(sc.nextLine());
+        }
+        else if (option == 4) {
+            editBook.setPrice(sc.nextDouble());
         }
         else {
             System.out.println("Opção invalida, tente novamente");

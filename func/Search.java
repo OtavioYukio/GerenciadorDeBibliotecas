@@ -19,6 +19,9 @@ public class Search {
         for (Book b : encontrados) {
             System.out.println(b);
         }
+        if (encontrados.size() == 0) {
+            System.out.println("Livro não existente");
+        }
 
         return encontrados;
     }
@@ -32,6 +35,9 @@ public class Search {
         }
         for (Book b : encontrados) {
             System.out.println(b);
+        }
+        if (encontrados.size() == 0) {
+            System.out.println("Autor não existente");
         }
         
         return encontrados;

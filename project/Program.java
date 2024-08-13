@@ -3,6 +3,7 @@ package project;
 import entities.Book;
 import entities.User;
 import func.Biblioteca;
+import func.Client;
 import func.Search;
 import java.util.Scanner;
 import java.util.List;
@@ -13,10 +14,12 @@ public class Program {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<Book> bookList = new ArrayList<>();
+        List<User> clients = new ArrayList<>();
         boolean running = true;
 
         while (running) {
-            System.out.println("O que deseja fazer?\n1 - Adicionar livro\n2 - Pesquisar livro por titulo\n3 - Pesquisar livro por autor\n4 - Listar livros disponiveis\n5 - Sair");
+            System.out.println("O que deseja fazer?\n1 - Adicionar livro\n2 - Pesquisar livro por titulo\n" +
+            "3 - Pesquisar livro por autor\n4 - Listar livros disponiveis\n5 - Alugel de livro\n6 - Listar dados de clientes\n7 - Sair");
             int option = sc.nextInt();
             sc.nextLine(); // Consumo de linha
             Clear.clear();
@@ -82,8 +85,17 @@ public class Program {
                         System.out.println(b);
                     }
                     break;
-
                 case 5:
+                    clients.add(Client.dataUser(bookList));
+                    Clear.clear();
+                    break;
+                case 6:
+                    for (User u : clients) {
+                        u.valuePrice(bookList);
+                        System.out.println(u);
+                    }
+                    break;
+                case 7:
                     Clear.clear();
                     running = false;
                     System.out.println("Saindo...");
